@@ -1,0 +1,129 @@
+/* ESTILO GERAL DO SITE */
+:root {
+            --cor-fundo: #FFF8DC;
+            --cor-terracota: #E2725B;
+            --cor-marrom: #5A3E2B;
+            --cor-verde-oliva: #556B2F;
+        }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+}
+
+.text-marrom { color: var(--cor-marrom); }
+.bg-terracota { background-color: var(--cor-terracota); }
+.text-verde-oliva { color: var(--cor-verde-oliva); }
+
+.btn-moderno {
+    background-color: var(--cor-terracota);
+    color: white;
+    border-radius: 50px; /* Borda arredondada */
+    font-weight: 500;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+}
+.btn-moderno:hover {
+    background-color: #c0604b;
+}
+
+.rounded-card { border-radius: 20px !important; }
+.search-bar {
+    border-radius: 50px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.select2-selection__choice{
+    background-color: #EEB287 !important;
+    color: #160B03 !important;
+    border: #160B03 !important;
+}
+
+.badge{
+    background-color: #EEB287 !important;
+    color: #160B03 !important;
+    border: #160B03 !important;
+}
+
+a{
+    color: #160B03;
+}
+
+#cabecalho{
+    box-shadow: 0px 0.5px 5px 2px #49210477 !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 3 !important;
+    background-color: #eedb87 !important;
+}
+
+
+/* Página receita */
+
+.recipe-image {
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ingredient-item {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 1px solid rgba(90, 62, 43, 0.1);
+}
+.ingredient-item:hover {
+    background-color: rgba(90, 62, 43, 0.05);
+}
+
+.step-item {
+    counter-increment: step-counter;
+}
+
+.step-item::before {
+    content: counter(step-counter);
+    background-color: var(--cor-terracota);
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+input[type='checkbox']:checked+label{
+      text-decoration: line-through;
+}
+
+/* Estilo do formulário de cadastro de receita */
+
+.processos button{
+    border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0 !important;
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .navbar{
+        background-color: inherit !important;
+    }
+    .scroll{
+        overflow-y: scroll !important;
+        
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .navbar{
+        background-color: inherit !important;
+    }
+
+    div.container-fluid{
+        width: 100vmax;
+        height: 100vmax;
+    }
+    
+}
